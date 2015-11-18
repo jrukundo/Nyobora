@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.school.ecallowa.nyobora" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".mainscreens.MainScreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="mainscreens.MainScreen"
+            android:label="@string/title_activity_main_screen"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mainscreens.People" >
+        </activity>
+        <activity android:name=".mainscreens.Language" >
+        </activity>
+        <activity android:name=".mainscreens.ThingsToDo" >
+        </activity>
+        <activity android:name=".customscreens.Settings" >
+        </activity>
+        <activity android:name=".customscreens.SavedInfo" >
+        </activity>
+        <activity android:name=".language.LanguageSelection" >
+        </activity>
+        <activity android:name=".people.Forum" >
+        </activity>
+        <activity android:name=".people.Profile" >
+        </activity>
+        <activity android:name=".people.PeopleAround" >
+        </activity>
+        <activity android:name=".saved.Connections" >
+        </activity>
+        <activity android:name=".saved.SavedLanguage" >
+        </activity>
+        <activity android:name=".saved.SavedThingsToDo" >
+        </activity>
+        <activity android:name=".thingstodo.ThingsToDoSelection" >
+        </activity>
+        <activity android:name=".thingstodo.CreateAnEvent" >
+        </activity>
+    </application>
+
+</manifest>

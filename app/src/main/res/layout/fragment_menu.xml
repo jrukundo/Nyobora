@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context="com.school.ecallowa.nyobora.fragments.MenuFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageButton
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/homeButton"
+        android:layout_gravity="left|top"
+        android:background="@drawable/home" />
+
+    <ImageButton
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:id="@+id/settingsMenuButton"
+        android:onClick="getSettingsPage"
+        android:layout_gravity="right|top"
+        android:background="@drawable/settingsmenu" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="@string/peo"
+        android:onClick="getPeoplePage"
+        android:id="@+id/peopleButton"
+        android:layout_gravity="top|left"
+        android:layout_marginTop="65dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lang"
+        android:onClick="getLanguagePage"
+        android:id="@+id/langButton"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="65dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Things"
+        android:onClick="getThingsToDoPage"
+        android:id="@+id/ttdButton"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="65dp" />
+
+</FrameLayout>
