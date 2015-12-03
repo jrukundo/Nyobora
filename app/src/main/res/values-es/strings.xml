@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="locsel">Región Elegida</string>
+    <string name="title_activity_main_screen">Pantalla principal</string>
+    <string name="locSel">Región Elegida</string>
+    <string name="peo">Gente</string>
+    <string name="lang">Idioma</string>
+    <string name="thingstodo">Cosas para hacer</string>
+    <string name="weather">Clima</string>
+    <string name="topthingstodo">Mejor Cosas que Hacer</string>
+    <string name="forum">Foro</string>
+    <string name="peopleArea">La gente en el Área</string>
+    <string name="profile">Tu perfil</string>
+    <string name="category">Categorías</string>
+    <string name="loc">Ubicaciones</string>
+    <string name="inter">Intereses</string>
+    <string name="connect">Conectar con otros</string>
+    <string name="outdoors">Al aire libre</string>
+    <string name="animals">Animales</string>
+    <string name="art">Arte</string>
+    <string name="museum">museos</string>
+    <string name="food">Comida</string>
+    <string name="technology">Tecnología</string>
+    <string name="settings">Ajustes</string>
+    <string name="savedInfo">Información Guardada</string>
+    <string name="upload">Subir una foto</string>
+    <string name="locationField">Localización:</string>
+    <string name="type">Tipo</string>
+    <string name="time">Hora</string>
+    <string name="typeoflang">Tipo de Lenguaje</string>
+    <string name="name">Nombre</string>
+    <string name="ageField">Años:</string>
+    <string name="descriptionField">Descripción:</string>
+    <string name="save">Guardar</string>
+    <string name="person1">persona1</string>
+    <string name="person2">persona2</string>
+    <string name="person3">persona3</string>
+    <string name="changelang">Cambie su idioma</string>
+    <string name="categoryoflang">Categoría de la Lengua</string>
+    <string name="savedThingsToDo">Sus cosas que hacer</string>
+    <string name="title">Título</string>
+    <string name="phoneField">Número de teléfono:</string>
+    <string name="savedlang">Guardados idioma</string>
+    <string name="selectlang">idioma seleccionado</string>
+    <string name="notifications">Notificaciones</string>
+    <string name="nameInput">Nombre:</string>
+    <string-array name="langlist">
+        <item>EN</item>
+        <item>ES</item>
+        <item>FR</item>
+    </string-array>
+    <string-array name="locationlist">
+        <item>Kigali, Ruanda</item>
+        <item>Pittsburgh, PA</item>
+        <item>Kampala, Uganda</item>
+    </string-array>
+</resources>
