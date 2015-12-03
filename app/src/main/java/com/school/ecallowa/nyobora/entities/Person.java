@@ -8,8 +8,17 @@ public class Person {
     private int _id;
     private String name;
     private String location;
+
+    public Person(int age, boolean connect, String[] interests, String location, String name, boolean notifications) {
+        this.age = age;
+        this.connect = connect;
+        this.interests = interests;
+        this.location = location;
+        this.name = name;
+        this.notifications = notifications;
+    }
+
     private String[] interests;
-    private String gender;
     private boolean connect;
     private boolean notifications;
     private int age;
@@ -28,14 +37,6 @@ public class Person {
 
     public void setConnect(boolean connect) {
         this.connect = connect;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
     }
 
     public int get_id() {
