@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="locsel">Lieu Sélectionné</string>
+    <string name="title_activity_main_screen">Écran principal</string>
+    <string name="locSel">Lieu Sélectionné</string>
+    <string name="peo">Gens</string>
+    <string name="lang">Langue</string>
+    <string name="thingstodo">Choses à faire</string>
+    <string name="weather">Météo</string>
+    <string name="topthingstodo">Activités favorites</string>
+    <string name="forum">Forum</string>
+    <string name="peopleArea">Personnes dans la région</string>
+    <string name="profile">Ton profil</string>
+    <string name="category">Catégories</string>
+    <string name="loc">emplacements</string>
+    <string name="inter">Intérêts</string>
+    <string name="connect">Communiquer avec les autres</string>
+    <string name="outdoors">En plein air</string>
+    <string name="animals">Animaux</string>
+    <string name="art">Art</string>
+    <string name="museum">Musées</string>
+    <string name="food">Aliments</string>
+    <string name="technology">La technologie</string>
+    <string name="settings">Paramètres</string>
+    <string name="savedInfo">Informations enregistrées</string>
+    <string name="upload">Télécharger une photo</string>
+    <string name="locationField">Emplacement:</string>
+    <string name="type">Type</string>
+    <string name="time">Temps</string>
+    <string name="typeoflang">Type de Langue</string>
+    <string name="name">Nom</string>
+    <string name="ageField"> Âge:</string>
+    <string name="descriptionField">Description:</string>
+    <string name="save">sauvegarder</string>
+    <string name="person1">Personne1</string>
+    <string name="person2">Personne2</string>
+    <string name="person3">Personne3</string>
+    <string name="changelang">Changer de langue</string>
+    <string name="categoryoflang">Catégorie de la langue</string>
+    <string name="savedThingsToDo">Vos Things To Do</string>
+    <string name="title">Titre</string>
+    <string name="phoneField">Numéro de téléphone:</string>
+    <string name="savedlang">Saved Langue</string>
+    <string name="selectlang">langue sélectionné</string>
+    <string name="notifications">Notifications</string>
+    <string name="nameInput">Nom:</string>
+    <string-array name="langlist">
+        <item>EN</item>
+        <item>ES</item>
+        <item>FR</item>
+    </string-array>
+    <string-array name="locationlist">
+        <item>Kigali, Rwanda</item>
+        <item>Pittsburgh, PA</item>
+        <item>Kampala, Ouganda</item>
+    </string-array>
+</resources>
