@@ -21,6 +21,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.school.ecallowa.nyobora.R;
+import com.school.ecallowa.nyobora.adapters.PersonAPI;
 
 import java.util.Locale;
 
@@ -51,7 +52,7 @@ public class Settings extends AppCompatActivity{
             public void onClick(View v) {
                 saveSettings(v);
 
-                //get rid of previous screen so it just goes back to the previous screen
+                //TODO:get rid of previous screen so it just goes back to the previous screen
             }
         });
 
@@ -164,8 +165,8 @@ public class Settings extends AppCompatActivity{
 
         SharedPreferences.Editor edit = sharedP.edit();
         edit.putString("location",location);
-        edit.putString("interests",ints);
-        edit.putString("applanguage",lang);
+        edit.putString("interests", ints);
+        edit.putString("applanguage", lang);
         if(connect) {
             edit.putBoolean("connect", true);
         }else{
@@ -179,6 +180,10 @@ public class Settings extends AppCompatActivity{
         }
         edit.putInt("language", locationOfLang);
         edit.apply();
+
+
+        PersonAPI thisPerson = new PersonAPI();
+        thisPerson.newPerson(getApplicationContext());
 
         Toast.makeText(this, "Saved", Toast.LENGTH_SHORT).show();
     }
