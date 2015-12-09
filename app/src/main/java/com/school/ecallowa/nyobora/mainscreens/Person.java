@@ -18,7 +18,7 @@ public class Person extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_people);
+        setContentView(R.layout.activity_person);
 
         forumButton = (Button) findViewById(R.id.forumButton);
         peopleAroundButton = (Button) findViewById(R.id.peopleAreaButton);
