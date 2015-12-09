@@ -5,57 +5,92 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.school.ecallowa.nyobora.mainscreens.Person">
+    tools:context="com.school.ecallowa.nyobora.person.Profile">
 
-    <fragment
-        android:layout_width="match_parent"
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/profileImg"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:name="com.school.ecallowa.nyobora.fragments.MenuFragment"
-        android:id="@+id/fragment"
-        tools:layout="@layout/fragment_menu"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentLeft="false"
+        android:text="@string/upload"
+        android:id="@+id/uploadButton"
+        android:layout_below="@+id/profileImg"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/profileName"
+        android:layout_below="@+id/uploadButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/ageProfile"
+        android:inputType="number"
+        android:paddingTop="5dp"
+        android:layout_alignLeft="@+id/profileName"
+        android:layout_alignStart="@+id/profileName"
+        android:layout_below="@+id/textView14"
+        android:layout_alignRight="@+id/profileName"
+        android:layout_alignEnd="@+id/profileName" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ageField"
+        android:id="@+id/textView14"
+        android:layout_below="@+id/profileName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/descriptionField"
+        android:id="@+id/textView15"
+        android:layout_above="@+id/saveButton"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/forum"
-        android:id="@+id/forumButton"
-        android:onClick="getForumPage"
-        android:layout_below="@+id/fragment"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="76dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/peopleArea"
-        android:id="@+id/peopleAreaButton"
-        android:layout_marginTop="53dp"
-        android:onClick="getPeopleAroundPage"
-        android:layout_below="@+id/forumButton"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/profile"
-        android:id="@+id/profileButton"
-        android:layout_marginBottom="38dp"
+        android:text="@string/save"
+        android:id="@+id/saveButton"
         android:layout_alignParentBottom="true"
-        android:onClick="getProfilePage"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="@string/peo"
-        android:id="@+id/textView4"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/forumButton"
-        android:layout_alignStart="@+id/forumButton" />
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/nameInput"
+        android:id="@+id/textView18"
+        android:layout_alignTop="@+id/profileName"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:maxLength="140"
+        android:id="@+id/descriptionProfile"
+        android:layout_alignLeft="@+id/ageProfile"
+        android:layout_alignStart="@+id/ageProfile"
+        android:layout_above="@+id/saveButton"
+        android:layout_below="@+id/ageProfile" />
 </RelativeLayout>
