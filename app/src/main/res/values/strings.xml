@@ -5,7 +5,6 @@
     <string name="locSel">Location Selected</string>
     <string name="peo">People</string>
     <string name="lang">Language</string>
-    <string name="Things">Things To Do</string>
     <string name="nyobora">Nyobora</string>
     <string name="weather">Weather</string>
     <string name="topthingstodo">Top Things to Do</string>
@@ -44,4 +43,18 @@
     <string name="phoneField">Phone Number:</string>
     <string name="savedlang">Saved Language</string>
     <string name="selectlang">Selected Language</string>
+    <string name="notifications">Notifications</string>
+    <string name="nameInput">Name:</string>
+    <string name="post">Post to the Forum</string>
+    <string name="takePic">Take a Picture</string>
+    <string-array name="langlist">
+        <item>EN</item>
+        <item>ES</item>
+        <item>FR</item>
+    </string-array>
+    <string-array name="locationlist">
+        <item>Kigali,Rwanda</item>
+        <item>Pittsburgh,PA</item>
+        <item>Kampala,Uganda</item>
+    </string-array>
 </resources>
