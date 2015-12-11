@@ -20,6 +20,8 @@ import java.util.ArrayList;
 public class PersonsAround extends AppCompatActivity {
 
     private ArrayList<Person> persons;
+    SharedPreferences settings = getSharedPreferences("userSettings", Context.MODE_PRIVATE);
+    SharedPreferences profile = getSharedPreferences("userProfile", Context.MODE_PRIVATE);
     String name;
 
     @Override
@@ -28,7 +30,6 @@ public class PersonsAround extends AppCompatActivity {
         setContentView(R.layout.activity_people_around);
 
         String location;
-        SharedPreferences settings = getSharedPreferences("userSettings", Context.MODE_PRIVATE);
 
         location = settings.getString("location", "");
         persons = getPersons(location);
@@ -104,6 +105,9 @@ public class PersonsAround extends AppCompatActivity {
     public void connectWith(Person person){
         String loc = person.getLocation();
         String name = person.getName();
+
+        String contact = profile.getString("contact","");
+        String person1name = profile.getString("name","");
 
         //TODO: Send a notification to that person
     }
