@@ -56,4 +56,5 @@
         <item>Pittsburgh, PA</item>
         <item>Kampala, Uganda</item>
     </string-array>
+    <string name="contact">Contacto</string>
 </resources>
