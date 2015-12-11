@@ -3,8 +3,10 @@ package com.school.ecallowa.nyobora.person;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -24,6 +26,7 @@ import java.io.ByteArrayOutputStream;
 
 public class Profile extends AppCompatActivity {
     private static int RESULT_LOAD_IMG = 1;
+    static final int REQUEST_IMAGE_CAPTURE = 2;
     String imgString;
     Bitmap bitmap;
     EditText nameInput;
@@ -38,6 +41,11 @@ public class Profile extends AppCompatActivity {
 
         Button sB = (Button) findViewById(R.id.saveButton);
         Button uB = (Button) findViewById(R.id.uploadButton);
+        Button tB = (Button) findViewById(R.id.photoButton);
+
+        if(hasCamera()){
+            tB.setEnabled(true);
+        }
 
         sB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +63,12 @@ public class Profile extends AppCompatActivity {
                 startActivityForResult(galleryIntent, RESULT_LOAD_IMG);
             }
         });
+        tB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                launchCamera(v);
+            }
+        });
         showProfile();
     }
 
@@ -69,9 +83,15 @@ public class Profile extends AppCompatActivity {
 
                 imgV = (ImageView) findViewById(R.id.profileImg);
                 imgV.setImageBitmap(bitmap);
-            }else{
-                Toast.makeText(this,"No image chosen",Toast.LENGTH_LONG).show();
-            }
+            }else if(requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK){
+                Bundle extras = data.getExtras();
+                Bitmap picture = (Bitmap) extras.get("data");
+                //TODO:Check for the correct rotation?
+                Matrix matrix = new Matrix();
+                matrix.postRotate(90);
+                picture = Bitmap.createBitmap(picture,0,0,picture.getWidth(),picture.getHeight(),matrix,true);
+                imgV.setImageBitmap(picture);
+             }
 
         }catch(Exception e){
             Toast.makeText(this,"Error",Toast.LENGTH_LONG).show();
@@ -127,7 +147,7 @@ public class Profile extends AppCompatActivity {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         image.compress(Bitmap.CompressFormat.PNG,100,out);
         byte[] imgarray = out.toByteArray();
-        String imgEncoded = Base64.encodeToString(imgarray,Base64.DEFAULT);
+        String imgEncoded = Base64.encodeToString(imgarray, Base64.DEFAULT);
 
         Log.d("Image Log: ",imgEncoded);
         return imgEncoded;
@@ -158,5 +178,14 @@ public class Profile extends AppCompatActivity {
         ageInput.setText(age);
         descriptionInput.setText(descript);
         imgV.setImageBitmap(imageBit);
+    }
+
+    private boolean hasCamera(){
+        return getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA);
+    }
+    public void launchCamera(View v){
+        Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+
+        startActivityForResult(i,REQUEST_IMAGE_CAPTURE);
     }
 }
