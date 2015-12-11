@@ -8,14 +8,14 @@
     tools:context="com.school.ecallowa.nyobora.person.Profile">
 
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:id="@+id/profileImg"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="@string/upload"
         android:id="@+id/uploadButton"
@@ -41,9 +41,9 @@
         android:paddingTop="5dp"
         android:layout_alignLeft="@+id/profileName"
         android:layout_alignStart="@+id/profileName"
-        android:layout_below="@+id/textView14"
         android:layout_alignRight="@+id/profileName"
-        android:layout_alignEnd="@+id/profileName" />
+        android:layout_alignEnd="@+id/profileName"
+        android:layout_below="@+id/profileName" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -85,7 +85,7 @@
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="65dp"
+        android:layout_height="75dp"
         android:inputType="textMultiLine"
         android:ems="10"
         android:maxLength="140"
@@ -93,7 +93,7 @@
         android:layout_alignLeft="@+id/ageProfile"
         android:layout_alignStart="@+id/ageProfile"
         android:layout_above="@+id/saveButton"
-        android:layout_below="@+id/ageProfile" />
+        android:layout_below="@+id/contactProfile" />
 
     <Button
         android:layout_width="wrap_content"
@@ -103,4 +103,23 @@
         android:layout_below="@+id/profileImg"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/contact"
+        android:id="@+id/textView20"
+        android:layout_below="@+id/ageProfile"
+        android:layout_alignLeft="@+id/uploadButton"
+        android:layout_alignStart="@+id/uploadButton" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/contactProfile"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/textView20" />
+
 </RelativeLayout>
