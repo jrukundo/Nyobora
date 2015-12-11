@@ -33,6 +33,7 @@ public class Profile extends AppCompatActivity {
     EditText ageInput;
     EditText descriptionInput;
     ImageView imgV;
+    EditText contactInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,10 +109,12 @@ public class Profile extends AppCompatActivity {
         nameInput = (EditText) findViewById(R.id.profileName);
         ageInput = (EditText) findViewById(R.id.ageProfile);
         descriptionInput = (EditText) findViewById(R.id.descriptionProfile);
+        contactInput = (EditText) findViewById(R.id.contactProfile);
 
         String userName = nameInput.getText().toString();
         String userAge = ageInput.getText().toString();
         String userDescription = descriptionInput.getText().toString();
+        String contact = contactInput.getText().toString();
         //TODO:Send location
 
         //Save to SharedPreferences
@@ -121,6 +124,7 @@ public class Profile extends AppCompatActivity {
         edit.putString("name",userName);
         edit.putString("age",userAge);
         edit.putString("description", userDescription);
+        edit.putString("contact",contact);
         imgV = (ImageView) findViewById(R.id.profileImg);
         bitmap = ((BitmapDrawable)imgV.getDrawable()).getBitmap();
        // bitmap = imgV.getBackground().getBit
@@ -164,6 +168,7 @@ public class Profile extends AppCompatActivity {
         String age = profile.getString("age", "");
         String descript = profile.getString("description", "");
         String imageString = profile.getString("image", "");
+        String contact = profile.getString("contact","");
         Bitmap imageBit = null;
         if(!imageString.equals("")){
             imageBit = decodeImage(imageString);
@@ -172,11 +177,13 @@ public class Profile extends AppCompatActivity {
         nameInput = (EditText) findViewById(R.id.profileName);
         ageInput = (EditText) findViewById(R.id.ageProfile);
         descriptionInput = (EditText) findViewById(R.id.descriptionProfile);
+        contactInput = (EditText) findViewById(R.id.contactProfile);
         imgV = (ImageView) findViewById(R.id.profileImg);
 
         nameInput.setText(name);
         ageInput.setText(age);
         descriptionInput.setText(descript);
+        contactInput.setText(contact);
         imgV.setImageBitmap(imageBit);
     }
 
