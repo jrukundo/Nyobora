@@ -87,7 +87,7 @@ public class Settings extends AppCompatActivity{
     }
     public void resetSettings(){
         String sets = getSettings();
-        if(!sets.contains("true") && !sets.contains("false")){
+        if(!sets.contains("true") && !sets.contains("false") || sets.contains("0")){
 
         }
         else {
