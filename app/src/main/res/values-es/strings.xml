@@ -44,6 +44,8 @@
     <string name="selectlang">idioma seleccionado</string>
     <string name="notifications">Notificaciones</string>
     <string name="nameInput">Nombre:</string>
+    <string name="post">Publicación del Foro</string>
+    <string name="takePic">Haz una foto</string>
     <string-array name="langlist">
         <item>EN</item>
         <item>ES</item>
