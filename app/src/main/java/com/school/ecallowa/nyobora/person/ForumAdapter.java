@@ -85,7 +85,7 @@ public class ForumAdapter extends BaseExpandableListAdapter {
 
         if(convertView == null){
             LayoutInflater inflaterI = (LayoutInflater) this._context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inflaterI.inflate(R.layout.list_group, null);
+            convertView = inflaterI.inflate(R.layout.list_item, null);
         }
 
         TextView textListChild = (TextView) convertView.findViewById(R.id.lblListItem);
@@ -96,6 +96,6 @@ public class ForumAdapter extends BaseExpandableListAdapter {
 
     @Override
     public boolean isChildSelectable(int groupPosition, int childPosition) {
-        return false;
+        return true;
     }
 }
