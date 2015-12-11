@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 public class PersonsAround extends AppCompatActivity {
 
     private ArrayList<Person> persons;
+    String name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,30 +44,35 @@ public class PersonsAround extends AppCompatActivity {
         listV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
-                String name = persons.get(position).getName();
+                LayoutInflater inflate = LayoutInflater.from(getApplicationContext());
 
-                Toast.makeText(PersonsAround.this,name + " was sent a notification",Toast.LENGTH_LONG).show();
+                View promptView = inflate.inflate(R.layout.prompts, null);
+
+                name = persons.get(position).getName();
 
                 //TODO:Connect with this person, pass the person or NAME to the servlet
-                final AlertDialog.Builder alert = new AlertDialog.Builder(getApplicationContext());
+                AlertDialog.Builder alert = new AlertDialog.Builder(PersonsAround.this);
 
                 alert.setTitle("Connect");
-                alert.setMessage("Would you like to connect with " + name);
+                alert.setMessage("Would you like to connect with " + name + "?");
+                alert.setView(promptView);
 
                 alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 connectWith(persons.get(position));
+                                Toast.makeText(PersonsAround.this, name + " was sent a notification", Toast.LENGTH_LONG).show();
                             }
                         }
-                ).setNegativeButton("No", new DialogInterface.OnClickListener() {
+                );
+                alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //TODO:Close the alert
+                        dialog.cancel();
                     }
                 });
-
-                alert.show();
+                AlertDialog dialog = alert.create();
+                dialog.show();
             }
         });
 
